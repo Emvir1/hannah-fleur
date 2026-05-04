@@ -1,0 +1,237 @@
+.about {
+  padding: 7rem 2rem 4rem;
+  background: var(--cream);
+}
+
+.about-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+.about-visual {
+  position: relative;
+}
+
+.about-img-wrapper {
+  position: relative;
+  border-radius: 24px;
+  overflow: visible;
+}
+
+.about-img-placeholder {
+  width: 100%;
+  aspect-ratio: 1;
+  background: linear-gradient(135deg, #fce4ec, #f8bbd9, #e1bee7);
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 20px 60px rgba(194, 24, 91, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.about-img-placeholder::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at 60% 40%, rgba(255,255,255,0.3) 0%, transparent 60%);
+}
+
+/* CSS Flower Art */
+.flower-art {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fa-center {
+  width: 50px;
+  height: 50px;
+  background: radial-gradient(circle, #ffd54f, #ffb300);
+  border-radius: 50%;
+  z-index: 2;
+  box-shadow: 0 0 20px rgba(255, 213, 79, 0.6);
+}
+
+.fa-petal {
+  position: absolute;
+  width: 40px;
+  height: 80px;
+  background: linear-gradient(to top, #f48fb1, #f8a5c2, #fce4ec);
+  border-radius: 50% 50% 30% 30%;
+  transform-origin: bottom center;
+  transform: rotate(var(--angle)) translateY(-40px);
+  opacity: 0.9;
+}
+
+.fa-stem {
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 8px;
+  height: 50px;
+  background: linear-gradient(to bottom, #66bb6a, #4caf50);
+  border-radius: 4px;
+}
+
+.fa-leaf {
+  position: absolute;
+  width: 35px;
+  height: 20px;
+  background: linear-gradient(135deg, #66bb6a, #4caf50);
+  border-radius: 50% 0 50% 0;
+}
+
+.fa-leaf-1 {
+  bottom: -20px;
+  left: calc(50% + 4px);
+  transform: rotate(-30deg);
+}
+
+.fa-leaf-2 {
+  bottom: -30px;
+  right: calc(50% + 4px);
+  transform: rotate(30deg) scaleX(-1);
+}
+
+.about-badge {
+  position: absolute;
+  bottom: -1.5rem;
+  right: -1.5rem;
+  background: linear-gradient(135deg, #c2185b, #e91e8c);
+  color: #fff;
+  border-radius: 16px;
+  padding: 1rem 1.2rem;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(194, 24, 91, 0.4);
+}
+
+.about-badge span {
+  font-size: 1.8rem;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.about-badge p {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  font-weight: 600;
+}
+
+.section-eyebrow {
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #c2185b;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: #2d1b24;
+  margin-bottom: 1.5rem;
+}
+
+.about-desc {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.about-features {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.feature-icon {
+  font-size: 1.2rem;
+}
+
+/* Stats */
+.stats-row {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.stat-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 2rem 1rem;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(194, 24, 91, 0.08);
+  border: 1px solid rgba(194, 24, 91, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(194, 24, 91, 0.15);
+}
+
+.stat-number {
+  display: block;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #c2185b;
+  margin-bottom: 0.4rem;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: #888;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 900px) {
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .about-visual {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .stats-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .stats-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+}
