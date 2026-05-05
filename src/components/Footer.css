@@ -14,13 +14,15 @@
   border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
-.footer-brand .footer-logo {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #f8a5c2;
+.footer-logo-img {
+  height: 90px;
+  width: auto;
+  object-fit: contain;
   display: block;
   margin-bottom: 1rem;
+  border-radius: 12px;
+  background: #fff;
+  padding: 8px 14px;
 }
 
 .footer-brand p {
@@ -35,6 +37,20 @@
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
+}
+
+.footer-social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: rgba(255,255,255,0.5);
+  text-decoration: none;
+  font-size: 0.88rem;
+  transition: color 0.3s;
+}
+
+.footer-social-link:hover {
+  color: #f8a5c2;
 }
 
 .footer-chip {

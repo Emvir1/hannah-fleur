@@ -21,26 +21,18 @@
 .navbar-brand {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
   text-decoration: none;
 }
 
-.brand-icon {
-  font-size: 1.8rem;
-  animation: spin 6s linear infinite;
+.navbar-logo {
+  height: 64px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
 }
 
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-.brand-name {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #c2185b;
-  letter-spacing: 1px;
+.navbar-logo:hover {
+  transform: scale(1.05);
 }
 
 .nav-links {

@@ -1,3 +1,4 @@
+import { FacebookIcon, InstagramIcon } from "./SocialIcons";
 import "./Footer.css";
 
 export default function Footer() {
@@ -5,7 +6,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer-inner">
         <div className="footer-brand">
-          <span className="footer-logo">✿ Hannah Fleur</span>
+          <img src="/logo.png" alt="Hannah Fleur" className="footer-logo-img" />
           <p>
             Handmade floral bouquets crafted with love — custom, personal, and
             budget-friendly for everyone.
@@ -17,7 +18,15 @@ export default function Footer() {
               rel="noreferrer"
               className="footer-chip"
             >
-              📘 Facebook Page
+              <FacebookIcon size={17} /> Facebook
+            </a>
+            <a
+              href="https://www.instagram.com/hannah.fleur_/"
+              target="_blank"
+              rel="noreferrer"
+              className="footer-chip"
+            >
+              <InstagramIcon size={17} /> Instagram
             </a>
             <a href="tel:+639155378044" className="footer-chip">
               📱 0915 537 8044
@@ -67,8 +76,19 @@ export default function Footer() {
                   href="https://www.facebook.com/people/Hannah-Fleur/61588988883986/"
                   target="_blank"
                   rel="noreferrer"
+                  className="footer-social-link"
                 >
-                  Facebook
+                  <FacebookIcon size={15} /> Facebook
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/hannah.fleur_/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="footer-social-link"
+                >
+                  <InstagramIcon size={15} /> Instagram
                 </a>
               </li>
               <li>

@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
+import { FacebookIcon, InstagramIcon } from "./SocialIcons";
 import "./Contact.css";
 
 export default function Contact() {
@@ -47,7 +48,7 @@ export default function Contact() {
               target="_blank"
               rel="noreferrer"
             >
-              <span className="ci-icon">📘</span>
+              <span className="ci-icon"><FacebookIcon size={26} /></span>
               <div>
                 <strong>Facebook Page</strong>
                 <span>Hannah Fleur — Message us here!</span>
@@ -60,7 +61,7 @@ export default function Contact() {
               target="_blank"
               rel="noreferrer"
             >
-              <span className="ci-icon">📸</span>
+              <span className="ci-icon"><InstagramIcon size={26} /></span>
               <div>
                 <strong>Instagram</strong>
                 <span>@hannah.fleur_</span>

@@ -21,10 +21,9 @@ export default function Navbar() {
       animate={{ y: 0 }}
       transition={{ duration: 0.7, ease: 'easeOut' }}
     >
-      <div className="navbar-brand">
-        <span className="brand-icon">✿</span>
-        <span className="brand-name">Hannah Fleur</span>
-      </div>
+      <a href="#home" className="navbar-brand">
+        <img src="/logo.png" alt="Hannah Fleur" className="navbar-logo" />
+      </a>
 
       <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
         {links.map((link) => (
