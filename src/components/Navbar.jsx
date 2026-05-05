@@ -15,39 +15,45 @@ export default function Navbar() {
   const links = ['Home', 'About', 'How to Order', 'Services', 'Contact'];
 
   return (
-    <motion.nav
-      className={`navbar ${scrolled ? 'scrolled' : ''}`}
-      initial={{ y: -80 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.7, ease: 'easeOut' }}
-    >
-      <a href="#home" className="navbar-brand">
-        <img src="/logo.png" alt="Hannah Fleur" className="navbar-logo" />
-      </a>
+    <>
+      {menuOpen && (
+        <div className="nav-overlay" onClick={() => setMenuOpen(false)} />
+      )}
 
-      <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
-        {links.map((link) => (
-          <li key={link}>
-            <a
-              href={link === 'How to Order' ? '#how-it-works' : `#${link.toLowerCase()}`}
-              onClick={() => setMenuOpen(false)}
-            >
-              {link}
+      <motion.nav
+        className={`navbar ${scrolled ? 'scrolled' : ''}`}
+        initial={{ y: -80 }}
+        animate={{ y: 0 }}
+        transition={{ duration: 0.7, ease: 'easeOut' }}
+      >
+        <a href="#home" className="navbar-brand">
+          <img src="/logo.png" alt="Hannah Fleur" className="navbar-logo" />
+        </a>
+
+        <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
+          {links.map((link) => (
+            <li key={link}>
+              <a
+                href={link === 'How to Order' ? '#how-it-works' : `#${link.toLowerCase()}`}
+                onClick={() => setMenuOpen(false)}
+              >
+                {link}
+              </a>
+            </li>
+          ))}
+          <li>
+            <a href="#contact" className="nav-cta" onClick={() => setMenuOpen(false)}>
+              Order Now
             </a>
           </li>
-        ))}
-        <li>
-          <a href="#contact" className="nav-cta" onClick={() => setMenuOpen(false)}>
-            Order Now
-          </a>
-        </li>
-      </ul>
+        </ul>
 
-      <button className="hamburger" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">
-        <span className={menuOpen ? 'open' : ''} />
-        <span className={menuOpen ? 'open' : ''} />
-        <span className={menuOpen ? 'open' : ''} />
-      </button>
-    </motion.nav>
+        <button className="hamburger" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">
+          <span className={menuOpen ? 'open' : ''} />
+          <span className={menuOpen ? 'open' : ''} />
+          <span className={menuOpen ? 'open' : ''} />
+        </button>
+      </motion.nav>
+    </>
   );
 }

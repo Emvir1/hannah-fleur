@@ -224,6 +224,13 @@
     max-width: 400px;
     margin: 0 auto;
   }
+  .about-img-wrapper {
+    overflow: hidden;
+  }
+  .about-badge {
+    right: 0.5rem;
+    bottom: 0.5rem;
+  }
   .stats-row {
     grid-template-columns: repeat(2, 1fr);
   }
